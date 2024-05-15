@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "helper_bot"
+version = "1"
+description = ""
+authors = ["Artem <artem.zimovets@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.4"
+prompt_toolkit = "^3.0.20"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+helper_bot = 'helper_bot.main:main'
