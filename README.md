@@ -1,4 +1,4 @@
-# project_group_9
+# CLI Bot to manage contacts book
  Персональний помічник(ПП) запускається командою helper, або через файл main.py
 ПП містить книгу контактів та книгу нотаток
 
