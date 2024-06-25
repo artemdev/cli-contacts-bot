@@ -1,65 +1,65 @@
-# Helper bot
- Персональний помічник(ПП) запускається командою helper, або через файл main.py
-ПП містить книгу контактів та книгу нотаток
+# Helper Bot
+Personal Assistant (PA) is launched with the `helper` command, or through the `main.py` file.
+The PA contains a contact book and a notebook.
 
-### Встановлення пакету
-1. Рекомендовано встановити та активувати вiртуальне оточення
-2. Перейти в папку скрипту та встановити його як пакет командою **pip install -e .**
-3. Після встановлення запустити помiчника з консолі командою **helper**
+### Package Installation
+1. It is recommended to install and activate a virtual environment.
+2. Navigate to the script folder and install it as a package with the command **pip install -e .**
+3. After installation, launch the assistant from the console with the command **helper**.
 
-### Книга контактів
-Контакт книги контактів має назву(ім"я) та містить список телефонів , 
-а також (необов"язково) дату народження, електронну адресу та адресу.
+### Contact Book
+A contact in the contact book has a name and contains a list of phone numbers, 
+as well as (optionally) a birth date, email address, and physical address.
 
-Є ряд команд по роботі з книгою контактів:
-- **create contact** - створення контакту: 
-    після команди вводиться ім"я(складається з літер алфавіту)
-    номер телефону(складається з цифр  в кількості 10 символів)
-    електронна адреса(приклад goit@gmail.com)
-    адреса
-    дата народження(формат день-місяць-рік, приклад 12-01-2000)
-- **add phone** - добавити номер телефону до списку телефонів обраного контакту
-- **show contacts** - показати весь вміст книги контактів
-- **search contact by name** - знайти контакт за заданим іменем
-- **edit phone** - редагувати номер телефону з заданого контакту
-- **edit birthday** - редагувати дату народження з заданого контакту
-- **edit address** - редагувати адресу з заданого контакту
-- **edit email** - редагувати електронну адресу з заданого контакту
-- **remove contact** - видалити контакт
-- **remove phone** - видалити номер телефону з заданого контакту
-- **remove birthday** - видалити дату народження з заданого контакту
-- **remove address** - видалити адресу з заданого контакту
-- **remove email** - видалити електронну адресу з заданого контакту
-- **search contact** - пошук контактів за заданою інформацією про ім"я контакту або номер телефону(або по буквам або по цифрам)'''
-- **birthdays** - пошук контактів з днями народження у період (днів) заданий користувачєм
+There are several commands for working with the contact book:
+- **create contact** - creates a contact: 
+    after the command, enter the name (consisting of alphabet letters),
+    phone number (consisting of digits, 10 characters long),
+    email address (example goit@gmail.com),
+    physical address,
+    birth date (format day-month-year, example 12-01-2000).
+- **add phone** - add a phone number to the selected contact's list of phones.
+- **show contacts** - display all contents of the contact book.
+- **search contact by name** - find a contact by the given name.
+- **edit phone** - edit a phone number of the selected contact.
+- **edit birthday** - edit the birth date of the selected contact.
+- **edit address** - edit the address of the selected contact.
+- **edit email** - edit the email address of the selected contact.
+- **remove contact** - delete a contact.
+- **remove phone** - delete a phone number from the selected contact.
+- **remove birthday** - delete the birth date from the selected contact.
+- **remove address** - delete the address from the selected contact.
+- **remove email** - delete the email address from the selected contact.
+- **search contact** - search for contacts by given information about the contact's name or phone number (either by letters or by numbers).
+- **birthdays** - search for contacts with birthdays within a period (days) specified by the user.
 
-### Книга нотатків
- Нотаток  складаеться з назви, опису та списку тегів. Кожен нотаток має унікальний ідентифікатор,
- який потрібен для управління нотатком(редагування чи видалення)
+### Notebook
+A note consists of a title, description, and a list of tags. Each note has a unique identifier,
+which is needed for managing the note (editing or deleting).
 
-Є ряд команд по роботі з книгою нотатків:
-- **add note** - команда для створення нового нотатку
-- **show all notes** - виводить список всіх існуючих нотатків, з можливістю сортування результату за назвою, описом чи тегами
-- **search note** - команда для пошуку серед нотатків, можливий пошук по тегам та по данним в нотатку
-- **delete note** - команда для видалення нотатку
-- **edit note** - команда для редагування нотатку
+There are several commands for working with the notebook:
+- **add note** - command to create a new note.
+- **show all notes** - displays a list of all existing notes, with the option to sort the results by title, description, or tags.
+- **search note** - command to search among notes, possible search by tags and by data in the note.
+- **delete note** - command to delete a note.
+- **edit note** - command to edit a note.
 
-### Сортування папки
-Сортує файл за відповдіними категоріями:
-зображення переносяться до папки images
-документи переносяться до папки documents
-аудіо файли переносяться до audio
-відео файли до video
-архіви розпаковуються, та їх вміст переноситься до папки archives
-файли з невідомими розширеннями переносяться в папку unknow
+### Folder Sorting
+Sorts files into corresponding categories:
+images are moved to the images folder,
+documents are moved to the documents folder,
+audio files are moved to the audio folder,
+video files to the video folder,
+archives are unpacked, and their contents are moved to the archives folder,
+files with unknown extensions are moved to the unknown folder.
 
-Викликається командою:
-- **sort folder** - Після чого порібно вкзати шлях до папки, яку потрібно відсортувати та шлях де буде створена папка з результатом сортування
+Invoked with the command:
+- **sort folder** - After which you need to specify the path to the folder to be sorted and the path where the result folder will be created.
 
-### Команди для завершення роботи з додатком
-- **good bye**, **close**, **exit** - завершення роботи додатка
+### Commands to Terminate the Application
+- **good bye**, **close**, **exit** - terminate the application.
 
-
+<!--
 Developed a Command-Line Interface (CLI) Application: Built a CLI application, [helper_bot](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22path%22%3A%22%2FUsers%2Fartem%2FDesktop%2Fprojects%2Fgoit-python%2Fcore%2Fcli-contacts-bot%2Fhelper_bot%2F__init__.py%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "helper_bot/__init__.py"), in Python that allows users to manage notes and contacts, and sort files in a directory. The application is structured in a modular way, with separate modules for different functionalities. The main entry point of the application is helper_bot/main.py.
 
 Implemented Note Management System: Created a note management system in helper_bot/src/notes/notes_handler.py that allows users to add, view, search, delete, and edit notes. This system uses the NoteBook class from helper_bot/src/notes/note_book.py and the Note class from helper_bot/src/notes/note.py.
@@ -69,3 +69,4 @@ Built a Contact Management System: Developed a contact management system in help
 Created User Interfaces for Different Modules: Designed user interfaces for the note and contact management systems in helper_bot/src/ui/NoteBookUserInterface.py and helper_bot/src/ui/ContactsUserInterface.py respectively. These interfaces provide feedback to the user based on their interactions with the application.
 
 Integrated a File Sorting Utility: Integrated a file sorting utility in helper_bot/src/sorter/sort_folder.py that allows users to sort files in a directory. This utility is accessible from the main CLI of the application.
+ -->
